@@ -1,0 +1,6 @@
+# name<TAB>bg|ill<TAB>subject (describe the scene only; the style and the no-text rule are added by gen-image.sh)
+bg-title	bg	an abstract field of soft light trails flowing toward the right edge, depth and haze, calm and premium
+bg-architecture	bg	a dark server hall seen in perspective on the right, faint glowing data lines connecting racks
+ill-one	ill	a single blank white label roll with a thin metallic antenna inlay, no printing
+ill-two	ill	a rugged handheld scanner device lying at an angle, its screen dark and blank
+ill-three	ill	a stack of three cardboard cartons with blank paper labels on a pallet

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{DECK_TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+<div class="viewport"><div class="stage">
+
+<!-- EXAMPLE SLIDES START: replace everything between START and END with the deck's slides. -->
+
+<!-- Pattern: hero. Everything is data-step="1", so the whole slide shows on entry.
+     Bilingual: Vietnamese title, English line in .hero-sub. <em> marks an optional accent word. -->
+<section class="slide">
+  <div class="bg" style="background-image:url(assets/img/bg-title.jpg)"></div>
+  <div class="scrim"></div>
+  <div class="content" style="justify-content:center">
+    <p class="presenter" data-step="1" data-anim="left">Trình bày bởi · Presented by <b>{{PRESENTER}}</b></p>
+    <h1 class="hero-title" data-step="1" data-anim="blur" style="margin-top:36px">{{TITLE_VI_START}} <em>{{TITLE_VI_ACCENT}}</em></h1>
+    <p class="hero-sub" data-step="1" data-anim="up">{{TITLE_EN}}</p>
+    <div data-step="1" data-anim="wipe" style="margin-top:56px;width:420px;height:2px;background:linear-gradient(90deg,var(--cyan),transparent)"></div>
+  </div>
+</section>
+
+<!-- Pattern: three illustrated tiles. Header shows on entry; each tile is one click. -->
+<section class="slide">
+  <div class="grid-fx"></div>
+  <div class="content">
+    <p class="kicker" data-step="1" data-anim="left"><span class="no">02</span> {{SECTION_VI}} · {{SECTION_EN}}</p>
+    <h2 class="title" data-step="1" data-anim="up">{{HEADLINE_VI}}</h2>
+    <p class="sub" data-step="1" data-anim="up">{{HEADLINE_EN}}</p>
+    <div class="body">
+      <div class="grid c3" style="flex:1;min-height:0">
+        <div class="tile" data-step="2" data-anim="up">
+          <div class="ill"><img src="assets/img/ill-one.jpg" alt=""></div>
+          <div class="key label"><p class="vi">{{POINT_1_VI}}</p><p class="en">{{POINT_1_EN}}</p></div>
+        </div>
+        <div class="tile" data-step="3" data-anim="up">
+          <div class="ill"><img src="assets/img/ill-two.jpg" alt=""></div>
+          <div class="key label"><p class="vi">{{POINT_2_VI}}</p><p class="en">{{POINT_2_EN}}</p></div>
+        </div>
+        <div class="tile" data-step="4" data-anim="up">
+          <div class="ill"><img src="assets/img/ill-three.jpg" alt=""></div>
+          <div class="key label"><p class="vi">{{POINT_3_VI}}</p><p class="en">{{POINT_3_EN}}</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pattern: numbered list beside an illustration, closing callout. -->
+<section class="slide">
+  <div class="grid-fx"></div>
+  <div class="content">
+    <p class="kicker" data-step="1" data-anim="left"><span class="no">03</span> {{SECTION_VI}} · {{SECTION_EN}}</p>
+    <h2 class="title" data-step="1" data-anim="up">{{HEADLINE_VI}}</h2>
+    <p class="sub" data-step="1" data-anim="up">{{HEADLINE_EN}}</p>
+    <div class="split" style="margin-top:40px">
+      <div>
+        <div class="num-item" data-step="2" data-anim="left"><span class="n">01</span><div class="key"><p class="vi">{{STEP_1_VI}}</p><p class="en">{{STEP_1_EN}}</p></div></div>
+        <div class="num-item" data-step="3" data-anim="left"><span class="n">02</span><div class="key"><p class="vi">{{STEP_2_VI}}</p><p class="en">{{STEP_2_EN}}</p></div></div>
+        <div class="num-item" data-step="4" data-anim="left"><span class="n">03</span><div class="key"><p class="vi">{{STEP_3_VI}}</p><p class="en">{{STEP_3_EN}}</p></div></div>
+      </div>
+      <div class="ill" data-step="2" data-anim="scale" style="height:640px"><img src="assets/img/ill-one.jpg" alt=""></div>
+    </div>
+    <div class="key callout" data-step="5" data-anim="up"><p class="vi">{{TAKEAWAY_VI}}</p><p class="en">{{TAKEAWAY_EN}}</p></div>
+  </div>
+</section>
+
+<!-- Pattern: flow diagram. Each wire shares a data-step with the node it leads to;
+     the dashed amber path is a return flow (core bottom-centre back to node A bottom-centre).
+     Node positions are absolute inside .diagram; the svg viewBox equals the diagram size. -->
+<section class="slide">
+  <div class="bg" style="background-image:url(assets/img/bg-architecture.jpg);opacity:.45"></div>
+  <div class="scrim soft"></div>
+  <div class="content">
+    <p class="kicker" data-step="1" data-anim="left"><span class="no">04</span> {{SECTION_VI}} · {{SECTION_EN}}</p>
+    <h2 class="title" data-step="1" data-anim="up">{{HEADLINE_VI}}</h2>
+    <p class="sub" data-step="1" data-anim="up">{{HEADLINE_EN}}</p>
+    <div class="diagram" style="width:1680px;height:440px;margin-top:40px">
+      <svg class="wires" viewBox="0 0 1680 440">
+        <path data-step="3" d="M300 220 H420"/>
+        <path data-step="4" d="M680 220 H800"/>
+        <path data-step="5" class="dash" style="stroke:var(--amber)" d="M970 320 C760 420 330 400 150 290"/>
+      </svg>
+      <div class="node key" data-step="2" data-anim="right" style="left:0;top:150px;width:300px;height:140px"><p class="vi">{{NODE_A_VI}}</p><p class="en">{{NODE_A_EN}}</p></div>
+      <div class="node key" data-step="3" data-anim="scale" style="left:420px;top:165px;width:260px;height:110px"><p class="vi">{{NODE_B_VI}}</p><p class="en">{{NODE_B_EN}}</p></div>
+      <div class="node key core" data-step="4" data-anim="scale" style="left:800px;top:120px;width:340px;height:200px"><p class="vi">{{CORE_VI}}</p><p class="en">{{CORE_EN}}</p></div>
+    </div>
+    <div class="key callout cyan push" data-step="5" data-anim="up"><p class="vi">{{FLOW_NOTE_VI}}</p><p class="en">{{FLOW_NOTE_EN}}</p></div>
+  </div>
+</section>
+
+<!-- EXAMPLE SLIDES END -->
+
+</div></div>
+
+<div class="chrome progress" id="progress"></div>
+<nav class="chrome controls" aria-label="Điều khiển slide">
+  <button id="btnPrev" title="Lùi (←)" aria-label="Lùi">←</button>
+  <span class="count" id="count"></span>
+  <button id="btnNext" title="Tiếp (→ / Space)" aria-label="Tiếp">→</button>
+  <span class="steps" id="steps"></span>
+  <button id="btnPlay" title="Tự chạy (A)" aria-label="Tự chạy" aria-pressed="false">▶</button>
+  <button id="btnGrid" title="Tổng quan (O)" aria-label="Tổng quan">▦</button>
+  <button id="btnFull" title="Toàn màn hình (F)" aria-label="Toàn màn hình">⛶</button>
+  <button id="btnHelp" title="Phím tắt (?)" aria-label="Phím tắt">?</button>
+</nav>
+<div class="overview" id="overview" aria-label="Tổng quan slide"></div>
+<div class="help" id="help">
+  <kbd>→ Space Enter</kbd> hiện khung tiếp; hết khung thì sang slide<br>
+  <kbd>←</kbd> ẩn khung vừa hiện / về slide trước<br><kbd>↓ ↑</kbd> nhảy cả slide<br>
+  <kbd>A</kbd> tự chạy · <kbd>R</kbd> chạy lại slide<br>
+  <kbd>O</kbd> tổng quan · <kbd>F</kbd> toàn màn hình<br>
+  <kbd>số + Enter</kbd> tới slide · <kbd>Home End</kbd><br>
+  Click = tiếp · chuột phải = lùi · vuốt trên mobile
+</div>
+<script src="deck.js"></script>
+</body>
+</html>

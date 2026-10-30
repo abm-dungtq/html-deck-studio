@@ -1,0 +1,9 @@
+assets/src
+tools
+plans
+.DS_Store
+**/.DS_Store
+.claude
+.vercel
+.gitignore
+.vercelignore
