@@ -15,7 +15,7 @@ Agents start from [`SKILL.md`](SKILL.md).
 Copy or clone the folder into a skills directory:
 
 ```bash
-git clone https://github.com/xaotiensinh-abm/html-deck-studio ~/.claude/skills/html-deck-studio
+git clone https://github.com/abm-dungtq/html-deck-studio ~/.claude/skills/html-deck-studio
 ```
 
 Use `~/.claude/skills/` for every project, or `<project>/.claude/skills/` for
